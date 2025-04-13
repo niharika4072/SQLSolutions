@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLdatabase</title>
+    <link rel="stylesheet" href="database.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!------------------------------------------------HEADER------------------------------------------------->
+    <header>
+        <div class="logo">
+            <h1>SQLSolutions</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sql.html"><i class="fas fa-code"></i> SQL </a></li>
+                <li><a href="PL.html"><i class="fas fa-database"></i> PL/SQL </a></li>
+                <li><a href="casestudy.html"><i class="fas fa-search"></i>Case Study</i></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="navbar">
+        <ul class="navlist">
+            <li><a href="sql.html">SQL Basics</a></li>
+            <li><a href="sqldatabase.html"> SQL Database</a></li>
+            <li><a href="tables.html"> SQL Tables</a></li>
+            <li><a href="Queries.html">SQL Queries</a></li>
+            <li><a href="clauses.html">SQL Clauses</a></li>
+            <li><a href="aggfun.html">SQL Aggregate Functions</a></li>
+            <li><a href="constraints.html">SQL Data Constraints</a></li>
+            <li><a href="joins.html">SQL Joins</a></li>
+        </ul>
+    </nav>
+
+    <!-------------------------CONTENT-------------------------------------------->
+    <section class="content">
+    <h2>Creating a database : CREATE Command</h2>
+    <p>The CREATE DATABASE statement is a foundational SQL command used to create new databases in SQL-based Database Management Systems (DBMS), including MySQL, PostgreSQL, SQL Server, and others. Understanding how to use this command effectively is crucial for developers, database administrators, and anyone working with relational databases.</p>
+    <p>The CREATE DATABASE command establishes a new database within your SQL ecosystem. A database is a repository that organizes data in structured formats through tables, views, stored procedures, and other components.</p><br>
+    <p>The syntax to use the CREATE DATABASE command in SQL is:</p> <br>
+    <p style="margin-left: 40px;"><i>CREATE DATABASE database_name;</i></p><br>
+    <p>Note that blank spaces are not allowed in the name of the database, we can only use underscore (_). </p>
+
+
+    <h2>List Databases in SQL</h2>
+    <p>To verify whether the new database that we have just created has been successfully added to our system or not, we will use SHOW DATABASES command  </p>
+    <br><p>Syntax:</p>
+    <br><p style="margin-left: 40px;"><i>SHOW DATABASES;</i></p>
+
+
+
+    <h2>Use Database in SQL</h2>
+    <p>Once your database is created, we can switch to that database to begin adding tables, inserting data, and performing queries. To do this, use the USE command.</p>
+    <br><p>Syntax:</p><br>
+    <p style="margin-left: 40px;"><i>USE database_name;</i></p>
+
+
+    <h2>Delete a database in SQL</h2>
+    <p>If you ever need to remove a database, the DROP DATABASE command can be used to delete the database and all its contents:</p>
+    <br><p>Syntax</p>
+    <br><p style="margin-left: 40px;"><i>DROP DATABASE database_name; </i></p>
+    </section>
+    <footer>
+        <p>© 2025 SQLSolutions | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

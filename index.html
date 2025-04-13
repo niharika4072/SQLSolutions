@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLSolutions</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!------------------------------------------------HEADER------------------------------------------------->
+    <header>
+        <div class="logo">
+            <h1>SQLSolutions</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sql.html"><i class="fas fa-code"></i> SQL </a></li>
+                <li><a href="PL.html"><i class="fas fa-database"></i> PL/SQL </a></li>
+                <li><a href="casestudy.html"><i class="fas fa-search"></i>Case Study</i></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--------------------------------------------FUN FACT SECTION---------------------------------------------------------->
+    <section class="slideshow">
+        <div class="quote-slide active" >
+            <p><b>Do you know?</b><br>
+                "Even though MySQL is open-source, it's owned and maintained by Oracle Corporation since 2010"
+            </p>
+        </div>
+        <div class="quote-slide">
+            <p><b>Do you know?</b><br>
+                 "MySQL is highly optimized for speed - with the right setup, it can process millions of queries per second"
+                </p>
+        </div>
+        <div class="quote-slide">
+            <p><b>Do you know?</b><br>
+                "MySQL runs on almost every OS - Windows, Linux, MacOS etc."</p>
+        </div>
+        <div class="quote-slide">
+            <p><b>Do you know?</b><br>
+                "MySQL is almost 30 years old! It was first released in May 1995."</p>
+        </div>
+        <div class="quote-slide">
+            <p><b>Do you know?</b><br>
+               "Even creators said you can say "My Sequel" or "My S-Q-L" - both are correct!"</p>
+        </div>
+    </section>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>MySQL</h2>
+            <p><i>"Where your data meets speed, security and simplicity"</i></p>
+           <p style="font-size: 20px; font-family:Georgia, 'Times New Roman', Times, serif; word-spacing: 10;"><i>"MySQL is one of the world's most popular open-source relational database management systems. Trusted by leading companies and developers globally. It provides a fast 
+            reliable and secure platform for managing data efficiently. From small projects to large-scale applications, MySQL powers dynamic websites and applications with high 
+            performance and flexibility."
+           </i></p>
+        </div>
+    </section>
+
+    <!-----------------------------------CONTENT SECTION ---------------------------------------------->
+    <section style="padding-left: 25px; padding-right: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.5;" >
+        <h1 style="text-align: center; font-size: 35px;">SQL Overview</h1>
+        <p>SQL stands for <i>"Structured Query Language"</i> which is a special purpose language used to define , access and manipulate data in RDBMS.
+        It provides a set of statements storing and retrieving data to and frm a relational database. It is widely used in the development of web-based applications, and it is supported by most RDBMSs, including MySQL, Oracle, and Microsoft SQL server.</p>
+        <p>The original version of SEQUEL <i>(Strutured English Query Language)</i> was designed by IBM in mid-1970s. <br>
+        SQL was first introduced as a commercial database system in 1979 by ORACLE CORPORATION.</p>
+
+        <h3>What is a Database?</h3>
+        <p>A database is an organized collection of structured information, or data, typically stored electronically in a computer system.
+            It can contain any type of data, including words, numbers, images, videos, and files. 
+        </p>
+        <p>A database is usually controlled by a database management system (DBMS). Together, the data and the DBMS, along with the applications that are associated with them, are referred to as a database system, often shortened to just database.</p>
+        <p>Data within the most common types of databases in operation today is typically modeled in rows and columns in a series of tables to make processing and data querying efficient. The data can then be easily accessed, managed, modified, updated, 
+            controlled, and organized. Most databases use structured query language (SQL) for writing and querying data.</p>
+
+        <p><u><b>Several advantages of using a database:</b></u></p>
+        <ul>
+            <li>A database allows data to be organized in a structured and consistent manner, making it easy to access and manipulate. </li>
+            <li>It ensures the integrity of the data by enforcing rules on data input and storage, and by tracking changes to the data. </li>
+            <li>It provides robust security features to protect the data from unauthorized access or changes</li>
+            <li>It allows applications to be developed and maintained independently of the data, making it easier to make changes to the data or the applications without affecting each other.</li>
+            <li>It allows multiple users to access and update the data simultaneously, making it easier to share information and collaborate.</li>
+
+        </ul>
+
+        <h3>What is DBMS?</h3>
+        <p>DBMS <i>(Database Management System)</i> is a tool to manage database. It acts as an interface between the user and the database. The user requests the DBMS to perform various operations 
+        such as insert, delete, update and retrieval on the database. </p>
+
+        <p>Using a Database Management System (DBMS) can bring several benefits to an organization. Here are some of the main advantages of a DBMS:</p>
+        <ul style="line-height: 1.8;">
+            <li><b><u>Improved data integrity:</u></b> A DBMS helps to ensure the integrity of data stored in the database by validating and enforcing rules on how it is entered and stored.</li>
+            <li><b><u>Reduced Data redundancy:</u></b> In DBMS, all the files are integrated in a single database. So there is no chance of duplicate data.</li>
+            <li><b><u>Security:</u></b> Data security level is high by protecting your precious data from unauthorized access. Only authorized users should have the grant to access the database with the help of credentials.</li>
+            <li><b><u>Supprots multiple users:</u></b> DBMS allows multiple users to access the same database at a time without any conflicts.</li>
+            <li><b><u>Prevent Data inconsistency:</u></b> In DBMS, data is stored in a single database so data becomes more consistent</li>
+            <li><b><u>Increased data sharing:</u></b>Data can be shared between authorized users of the database in DBMS. All the users have their own right to access the database. Admin has complete access to the database. He has a right to assign users to access the database. </li>
+            <li><b><u>Backup:</u></b> DBMS takes backup automatically and recovery of the database.</li>
+        </ul>
+
+        <h3>What is RDBMS?</h3>
+        <ul>
+            <li>RDBMS stands for Relational Database Management System.</li>
+            <li>It is a type of DBMS that stores data in the form of tables(also called relations). Eah table has rows(records) and columns(attributes). </li>
+            <li>In this, data is stored in tabular form.</li>
+            <li>Tables are related to each other using keys(Primary key, Foreign key)</li>
+            <li>Ensures data integrity and reduces redundancy</li>
+            <li>Supports SQL language for operations like insert, update, delete and retrieve.</li>
+            <li>MySQL, Oracle, Microsoft SQL server, PostgreSQL, IBM DB2 are the examples of RDBMS.</li>
+        </ul>
+
+
+    <!----------------------FOOTER-------------------------------------->
+    <footer>
+        <p>© 2025 SQLSolutions | All Rights Reserved</p>
+    </footer>
+
+<!-----------------------------------CSS--------------------------------------------------------------->
+<style>
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    .content-section h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Slideshow Styling */
+    .slideshow {
+        text-align: center;
+        background-color: #f4f3ef;
+        padding: 20px;
+    }
+
+    .quote-slide {
+            display: none;
+            font-size: 18px;
+            color: #333;
+        }
+        .quote-slide.active {
+            display: block;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+</style>
+
+
+
+
+<script>
+    // Quote Slideshow
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".quote-slide");
+
+    function showSlide() {
+        slides.forEach(slide => slide.classList.remove("active"));
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+    }
+    setInterval(showSlide, 5000);
+
+    // Intersection Observer for Fade-in Animation on Scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+            }
+        });
+    });
+    document.querySelectorAll(".topic-section").forEach(section => {
+        observer.observe(section);
+    });
+</script>
+</body>
+</html>
+
+

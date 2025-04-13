@@ -1,0 +1,379 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constraints</title>
+    <style>
+        
+        body{
+    color: #3e3f5b;
+    margin-right: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.content h2 { 
+  margin-left: 30px;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+
+.content p {
+    margin-left: 25px;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: justify;
+    
+}
+
+.content h3 {
+    margin-top: 18px;
+}
+
+.content ul li{
+    margin-left: 40px;
+    line-height: 1.3;
+    font-size: 18px;
+}
+.content ul {
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+:root {
+    --primary-color: #3E3F5B; /* Soft Dark Gray */
+    --secondary-color: #A6CDC6; /* Light Mint */
+    --accent-color: #16404D; /* Light Mint */
+    --light-color: #f5f3ec; /* Soft blue grey */
+    --text-color: #3E3F5B;   /* Dark Navy */
+    --hover-color: #292c60;  /* Deep mint */
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+
+    background-color: var(--light-color);
+    color: var(--text-color);
+    padding-top: 100px; /* Header (60px) + Navbar (50px) */
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    position: fixed;
+    top: 100px; /* Directly below header */
+    left: 0;
+    right: 0;
+    height: 90px;
+    z-index: 999;
+   
+}
+
+.navlist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navlist li {
+    position: relative;
+}
+
+.navlist li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.navlist li a:hover {
+    background-color: var(--hover-color);
+}
+
+/* Navigation Dropdown */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--hover-color);
+    border-radius: 5px;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+nav ul li .dropdown-content a {
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    text-align: left;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: var(--hover-color);
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Slightly more padding if elements stack */
+    }
+
+    .navlist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlist li ul {
+        position: static;
+    }
+}
+
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!------------------------------------------------HEADER------------------------------------------------->
+    <header>
+        <div class="logo">
+            <h1>SQLSolutions</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sql.html"><i class="fas fa-code"></i> SQL </a></li>
+                <li><a href="PL.html"><i class="fas fa-database"></i> PL/SQL </a></li>
+                <li><a href="casestudy.html"><i class="fas fa-search"></i>Case Study</i></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="navbar">
+        <ul class="navlist">
+            <li><a href="sql.html">SQL Basics</a></li>
+            <li><a href="sqldatabase.html"> SQL Database</a></li>
+            <li><a href="tables.html"> SQL Tables</a></li>
+            <li><a href="Queries.html">SQL Queries</a></li>
+            <li><a href="clauses.html">SQL Clauses</a></li>
+            <li><a href="aggfun.html">SQL Aggregate Functions</a></li>
+            <li><a href="constraints.html">SQL Data Constraints</a></li>
+            <li><a href="joins.html">SQL Joins</a></li>
+        </ul>
+    </nav>
+
+    <!-----------------contents-------------------------------------------->
+    <section class="content">
+        <p>In SQL, constraints are used to enforce rules on data, ensuring the accuracy, consistency, and integrity of the data stored in a database. One of the most commonly used constraints is the NOT NULL constraint, which ensures that a column cannot have NULL values.
+
+            This is important for maintaining data integrity, especially when specific data entries are mandatory. In this article, we will explore the SQL NOT NULL constraint in detail, its syntax, and how it can be applied to your tables.</p>
+        <h2>SQL NOT NULL Constraint</h2>
+        <p>The NOT NULL constraint is used to enforce that a column in a table must always contain a value; it cannot contain a NULL value. By default, columns in SQL can hold NULL values, meaning they can have no data. However, for certain columns—such as IDs, names, or any required fields—you may want to enforce the rule that no NULL values can be inserted.</p>
+        <p>his constraint is similar to a primary key constraint in that both prevent NULL values. However, they are different in their purpose and application. A primary key uniquely identifies each record in a table, while the NOT NULL constraint simply ensures that a column cannot have empty or undefined values.</p>
+        <br><p>Syntax:</p>
+        <br><p><i>CREATE TABLE table_Name
+            (
+            column1 data_type(size) NOT NULL,
+            column2 data_type(size) NOT NULL,
+            ….
+            );</i></p>
+
+        <br><p>Example:</p>
+        <br><p><i>CREATE TABLE Emp( <br>
+            EmpID INT NOT NULL PRIMARY KEY, <br>
+            Name VARCHAR (50), <br>
+            Country VARCHAR(50), <br>
+            Age int(2), <br>
+          Salary int(10));</i></p>
+
+
+          <h2>SQL UNIQUE Constraint</h2>
+          <p>The SQL UNIQUE constraint ensures that all values in a column or a set of columns are different from one another. It can be applied to one or more columns in a table. When applied, the database will reject any insert or update operation that would create a duplicate value in the specified column(s).</p>
+          <p>The UNIQUE constraint allows NULL values, and multiple NULL values are allowed in a column with a UNIQUE constraint because NULL is considered a distinct value in SQL. However, this behavior is different from the PRIMARY KEY constraint, where NULL values are not allowed, as a primary key must uniquely identify each row and cannot have missing or undefined values.</p>
+          <br><p>Syntax:</p>
+          <br><p><i>
+            CREATE TABLE table_name ( <br>
+             column1 datatype UNIQUE, <br>
+             column2 datatype, <br>
+             … <br>
+            );</i></p>
+
+            <br><p>Example:</p>
+            <br><p><i>CREATE TABLE Customers ( <br>
+                CustomerID INT PRIMARY KEY, <br>
+                Name VARCHAR(100), <br>
+                Email VARCHAR(100) UNIQUE, <br>
+                Country VARCHAR(50) <br>
+            );</i></p>
+
+
+
+            <h2>SQL PRIMARY KEY Constraint</h2>
+            <p>The PRIMARY KEY constraint in SQL is one of the most important constraints used to ensure data integrity in a database table. A primary key uniquely identifies each record in a table, preventing duplicate or NULL values in the specified column(s). Understanding how to properly implement and use the primary key constraint is crucial for managing relational data effectively.</p>
+            <p>There can only be one primary key in a table, but that primary key can consist of one or more columns. When there are two or more columns in the primary key it is called a composite key.</p>
+            <p>A primary key automatically has a UNIQUE constraint defined on it, and it ensures that there are no duplicate or NULL values in that column.</p>
+            <p><b>SQL PRIMARY KEY Properties</b></p>
+            <ul>
+                <li>No duplicate values are allowed, i.e. The column assigned as the primary key should have UNIQUE values only.</li>
+                <li>NO NULL values are present in the Primary key column. Hence there is a Mandatory value in the column having the Primary key.</li>
+                <li>Only one primary key per table exists although the Primary key may have multiple columns.</li>
+                <li>No new row can be inserted with the already existing primary key.</li>
+                <li>Primary keys can be classified into two categories Simple primary key that consists of one column and composite primary key that consists of Multiple column.</li>
+                <li>Defined in CREATE TABLE or ALTER TABLE statement.</li>
+            </ul>
+
+            <br><p><u>With CREATE command</u></p>
+            <br><p><i>CREATE TABLE table_name ( <br>
+                column1 datatype constraint, <br>
+                column2 datatype constraint, <br>
+                …, <br>
+                CONSTRAINT pk_constraint_name PRIMARY KEY (column1, column2, …) <br>
+               );
+             </i></p>
+
+
+             <br><p><u>With ALTER command</u></p>
+             <br><p><i>ALTER TABLE table_name <br>
+                ADD CONSTRAINT constraint_name PRIMARY KEY (column1, column2, … column_n);</i></p>
+
+                <br><p>Examples:</p>
+                <br><p><i>ALTER TABLE Persons <br>
+                    ADD CONSTRAINT PK_Person PRIMARY KEY (PersonID);</i></p>
+
+
+                <h2>SQL FOREIGN KEY Constraint</h2>
+                <p>A FOREIGN KEY constraint is a fundamental concept in relational databases, ensuring data integrity by enforcing relationships between tables. By linking a child table to a parent table, the foreign key establishes referential integrity. This constraint ensures that the values in the foreign key column match the primary key values in the referenced table, thereby maintaining consistent and valid data across the database.</p>
+                <p>A FOREIGN KEY is a column or set of columns in one table that references the primary key columns of another table. This creates a relationship between the two tables, ensuring that the child table (which contains the foreign key) can only have values that exist in the parent table’s primary key column(s).</p>
+                <p>The table containing the foreign key is called the foreign table (or child table), and the table that the foreign key references is called the primary table (or parent table).</p>
+                <p>The primary purpose of a foreign key is to maintain referential integrity, ensuring that the relationship between tables is consistent and that invalid data does not enter the system.</p>
+                <br><p>Syntax:</p>
+                <br><p><i>CREATE TABLE table_name ( <br>
+                    column1 datatype, <br>
+                    column2 datatype, <br>
+                    …, <br>
+                    CONSTRAINT fk_constraint_name FOREIGN KEY (column1, column2, …) <br>
+                      REFERENCES parent_table(column1, column2, …) <br>
+                  );
+                  
+                  </i></p>
+
+
+                  <h2>SQL CHECK Constraint</h2>
+                  <p>he CHECK constraint in SQL is used to limit the range or set of values that can be inserted into a column. It ensures that the data entered into a column meets a certain condition or rule. The CHECK constraint can be applied to a column when the table is created or altered. If any data being inserted or updated violates the CHECK condition, the database will return an error and the operation will be prevented.</p>
+                  <br><p>Syntax:</p><br>
+                  <p><i>CREATE TABLE table_name ( <br>
+                    column1 datatype, <br>
+                    column2 datatype CHECK (condition), <br>
+                    ... <br>
+                );</i></p>
+
+                <br><p><b>Key Points About the CHECK Constraint</b></p>
+                <ul>
+                    <li>Domain Integrity: It ensures that the values in a column meet specified conditions, thus helping maintain valid data in the database.</li>
+                    <li>Used with CREATE or ALTER: The CHECK constraint can be defined when creating a table or added to an existing table.</li>
+                    <li>Can Be Combined with Other Constraints: You can use CHECK along with other constraints like PRIMARY KEY, FOREIGN KEY, and NOT NULL to define more comprehensive rules for the table data.</li>
+                    <li>Row-level Constraints: Unlike column-level constraints that affect individual columns, a CHECK constraint can apply to multiple columns at once if needed.</li>
+                </ul>
+
+
+                <h2>SQL DEFAULT Constraint</h2>
+                <p>The DEFAULT constraint in SQL is used to provide a default value for a column when no value is specified during an INSERT operation. If a column has a DEFAULT constraint and no value is explicitly provided during the insertion of a record, the database will automatically insert the default value defined for that column.</p>
+                <br><p>Syntax:</p>
+                <br><p><i>CREATE TABLE table_name ( <br>
+                    column1 datatype DEFAULT default_value, <br>
+                    column2 datatype DEFAULT default_value, <br>
+                    ... <br>
+                );</i></p>
+                <br><p><b>Key Points About the DEFAULT Constraint</b></p>
+                <ul>
+                    <li>Automatic Value Insertion: The DEFAULT constraint ensures that if a value is not supplied during insertion, a pre-defined default value is used.</li>
+                    <li>Simplifies Data Entry: It simplifies data entry when certain fields often have common or default values.</li>
+                    <li>Optional in SQL: The DEFAULT constraint is optional. Not all columns require a default value.</li>
+                    <li>Can Be Applied to Any Data Type: It can be applied to any data type, including numbers, dates, and strings.</li>
+                    <li>Not Applicable to NULL: You cannot use the DEFAULT constraint to assign NULL as a default value. For null values, you can either omit the value or explicitly specify NULL.</li>
+                </ul>
+
+
+
+    </section>
+    <footer>
+        <p>© 2025 SQLSolutions | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLtables</title>
+    <style>
+        
+        body{
+    color: #3e3f5b;
+    margin-right: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.content h2 { 
+  margin-left: 30px;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+
+.content p {
+    margin-left: 25px;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: justify;
+    
+}
+
+.content h3 {
+    margin-top: 18px;
+}
+
+.content ul li{
+    margin-left: 40px;
+    line-height: 1.3;
+    font-size: 18px;
+}
+.content ul {
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+:root {
+    --primary-color: #3E3F5B; /* Soft Dark Gray */
+    --secondary-color: #A6CDC6; /* Light Mint */
+    --accent-color: #16404D; /* Light Mint */
+    --light-color: #f5f3ec; /* Soft blue grey */
+    --text-color: #3E3F5B;   /* Dark Navy */
+    --hover-color: #292c60;  /* Deep mint */
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+
+    background-color: var(--light-color);
+    color: var(--text-color);
+    padding-top: 100px; /* Header (60px) + Navbar (50px) */
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    position: fixed;
+    top: 100px; /* Directly below header */
+    left: 0;
+    right: 0;
+    height: 90px;
+    z-index: 999;
+   
+}
+
+.navlist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navlist li {
+    position: relative;
+}
+
+.navlist li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.navlist li a:hover {
+    background-color: var(--hover-color);
+}
+
+/* Navigation Dropdown */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--hover-color);
+    border-radius: 5px;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+nav ul li .dropdown-content a {
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    text-align: left;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: var(--hover-color);
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Slightly more padding if elements stack */
+    }
+
+    .navlist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlist li ul {
+        position: static;
+    }
+}
+
+    </style>
+   
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!------------------------------------------------HEADER------------------------------------------------->
+    <header>
+        <div class="logo">
+            <h1>SQLSolutions</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sql.html"><i class="fas fa-code"></i> SQL </a></li>
+                <li><a href="PL.html"><i class="fas fa-database"></i> PL/SQL </a></li>
+                <li><a href="casestudy.html"><i class="fas fa-search"></i>Case Study</i></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="navbar">
+        <ul class="navlist">
+            <li><a href="sql.html">SQL Basics</a></li>
+            <li><a href="sqldatabase.html"> SQL Database</a></li>
+            <li><a href="tables.html"> SQL Tables</a></li>
+            <li><a href="Queries.html">SQL Queries</a></li>
+            <li><a href="clauses.html">SQL Clauses</a></li>
+            <li><a href="aggfun.html">SQL Aggregate Functions</a></li>
+            <li><a href="constraints.html">SQL Data Constraints</a></li>
+            <li><a href="joins.html">SQL Joins</a></li>
+        </ul>
+    </nav>
+
+
+    <!----------------------Content------------------------------------->
+    <section class="content">
+    <h2>Creating Table in SQL</h2>
+    <p>The SQL CREATE TABLE statement is a foundational command used to define and structure a new table in a database. By specifying the columns, data types, and constraints such as PRIMARY KEY, NOT NULL, and CHECK, helps you design the database schema.</p>
+    <h2>CREATE TABLE Statement</h2>
+    <p>To create a new table in the database, use the SQL CREATE TABLE statement. A table’s structure, including column names, data types, and constraints like NOT NULL, PRIMARY KEY, and CHECK, are defined when it is created in SQL.</p>
+    <p>The CREATE TABLE command is a crucial tool for database administration because of these limitations, which aid in ensuring data integrity. To create a table in SQL, use this CREATE TABLE syntax:</p>
+    <br><p style="margin-left: 35px;"><i>CREATE table table_name <br>
+        ( <br>
+        Column1 datatype (size), <br>
+        column2 datatype (size), <br>
+        . <br>
+        . <br>
+        columnN datatype(size) <br>
+        ); <br>
+        
+        </i></p><br>
+        <p><b>Key terms</b></p>
+            <ul>
+                <li>table_name: The name you assign to the new table.</li>
+                <li>column1, column2, … : The names of the columns in the table.</li>
+                <li>datatype(size): Defines the data type and size of each column.</li>
+            </ul>
+
+            <br><p>Example:</p> <br>
+            <p style="margin-left: 70px;"><i>CREATE TABLE Customer(<br>
+                CustomerID INT PRIMARY KEY,<br>
+                CustomerName VARCHAR(50),<br>
+                LastName VARCHAR(50),<br>
+                Country VARCHAR(50),<br>
+                Age INT CHECK (Age >= 0 AND Age &lt= 99), <br>
+                Phone int(10) <br>
+            );</i></p>
+
+            <h2>Creating table from another table</h2>
+            <p>We can also create a new table based on the structure (and optionally the data) of an existing table. The following query creates a new table called SubTable that contains CustomerID and CustomerName from the existing Customer table.</p>
+            <br><p>Syntax: </p>
+            <br><p style="margin-left: 70px;"><i>CREATE TABLE new_table_name AS <br>
+                SELECT column1, column2,… <br>
+                FROM existing_table_name <br>
+                WHERE ….;</i></p>
+
+            <br><p>Example:</p> <br>
+            <p style="margin-left: 70px;"><i>CREATE TABLE SubTable AS <br>
+                SELECT CustomerID, CustomerName <br>
+                FROM customer;</i></p>
+
+            <br><p>Note: We can use * instead of column name to copy whole table to another table.</p>
+            <br><p><b>Important Points About SQL CREATE TABLE Statement</b></p>
+            <ul>
+                <li>CREATE TABLE statement is used to create new table in a database.</li>
+                <li>It defines the structure of table including name and datatype of columns.</li>
+                <li>The DESC table_name; command can be used to display the structure of the created table</li>
+                <li>We can also add constraint to table like NOT NULL, UNIQUE, CHECK, and DEFAULT.</li>
+                <li>If you try to create a table that already exists, MySQL will throw an error. To avoid this, you can use the CREATE TABLE IF NOT EXISTS syntax.</li>
+
+            </ul>
+            <h2>Dropping a table : DROP TABLE</h2>
+            <p>The DROP TABLE command in SQL is a powerful and essential tool used to permanently delete a table from a database, along with all of its data, structure, and associated constraints such as indexes, triggers, and permissions. When executed, this command removes the table and all its contents, making it unrecoverable unless backed up.</p>
+            <p> <ul>
+                <li>The DROP TABLE statement in SQL is used to delete a table and all of its data from the database permanently.</li>
+                <li>This operation cannot be undone, and once the table is dropped all data in that table is lost.</li>
+                <li>Once executed, this operation removes the table definition and all of its rows, so the table can no longer be accessed or used.</li>
+                <li>This action is irreversible which means that once a table is dropped, it cannot be recovered unless there is a backup.</li>
+
+            </ul></p>
+            <br><p>Syntax:</p>
+            <br><p style="margin-left: 70px;"><i>DROP TABLE table_name;</i></p>
+
+            <h2>Renaming a table: ALTER COMMAND</h2>
+            <p>The ALTER TABLE statement in SQL is used to modify an existing table structure in a database without losing any data. It allows you to add, remove, or modify columns, change data types, or apply constraints to improve data integrity and ensure that the table meets evolving business requirements. It allows for structural changes like adding new columns, modifying existing ones, deleting columns, and renaming columns within a table.</p>
+            <br><p>Syntax:</p><br>
+            <p style="margin-left: 70px;"><i>ALTER TABLE table_name <br>
+                RENAME TO new_table_name;</i></p><br>
+            <p>Example:</p> <br>
+            <p style="margin-left: 70px;"><i>ALTER TABLE Student  <br>RENAME COLUMN Column_NAME TO FIRST_NAME;</i></p>
+
+
+        </section>
+        <footer>
+            <p>© 2025 SQLSolutions | All Rights Reserved</p>
+        </footer>
+        </body>
+        </html>

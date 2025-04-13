@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="pl.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!------------------------------------------------HEADER------------------------------------------------->
+    <header>
+        <div class="logo">
+            <h1>SQLSolutions</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sql.html"><i class="fas fa-code"></i> SQL </a></li>
+                <li><a href="PL.html"><i class="fas fa-database"></i> PL/SQL </a></li>
+                <li><a href="casestudy.html"><i class="fas fa-search"></i>Case Study</i></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="navbar">
+        <ul class="navlist">
+            <li><a href="PL.html">Introduction to PL/SQL</a></li>
+            <li><a href="controlstructure.html">Control Structure</a</li>
+            <li><a href="cursor.html">Cursor Management</a</li>
+            <li><a href="triggers.html">Triggers</a</li>
+            <li><a href="exption.html">Exception Handling</a></li>
+        </ul>
+    </nav>
+
+    <Section class="content">
+        
+
+
+                <h2>Introduction to PL/SQL</h2>
+        
+                <p>PL/SQL stands for Procedural Language/Structured Query Language. It is an extension of SQL developed by Oracle to combine the power of SQL with the procedural features of programming languages.</p>
+        
+                <p>PL/SQL allows developers to write code in a procedural format, enabling the use of programming concepts like loops, conditions, functions, procedures, and triggers within the database.</p>
+        
+                <h2>Features of PL/SQL</h2>
+                <ul>
+                    <li><b>Block Structure:</b> PL/SQL code is organized into logical blocks consisting of a declaration section, execution section, and exception handling section.</li>
+                    <li><b>Tight Integration with SQL:</b> PL/SQL supports SQL commands like SELECT, INSERT, UPDATE, DELETE directly within its blocks.</li>
+                    <li><b>Procedural Capabilities:</b> Supports programming features such as loops, conditions, functions, procedures, and triggers.</li>
+                    <li><b>Exception Handling:</b> PL/SQL provides a robust mechanism to handle errors during program execution.</li>
+                    <li><b>Portability:</b> PL/SQL code can be easily transferred and run across different Oracle database environments.</li>
+                </ul>
+        
+                <h2>Advantages of PL/SQL</h2>
+                <ul>
+                    <li><b>Improved Performance:</b> Multiple SQL statements can be sent to the database in a single block reducing network traffic.</li>
+                    <li><b>High Security:</b> Business logic can be stored in the database reducing exposure to the client application.</li>
+                    <li><b>Code Reusability:</b> Supports creating reusable program units like procedures and functions.</li>
+                    <li><b>Error Handling:</b> Provides powerful error handling features to catch and resolve errors effectively.</li>
+                </ul>
+        
+                <h2>Structure of PL/SQL Block</h2>
+        
+                <p>The basic structure of a PL/SQL block is as follows:</p>
+        
+                <p>
+                DECLARE <br>
+                &nbsp;&nbsp;-- Variable declarations <br>
+                BEGIN <br>
+                &nbsp;&nbsp;-- SQL and PL/SQL statements <br>
+                EXCEPTION <br>
+                &nbsp;&nbsp;-- Exception handling statements <br>
+                END;
+                </p>
+        
+                <h2>Example of PL/SQL Block</h2>
+        
+                <p>
+                DECLARE <br>
+                &nbsp;&nbsp;v_name VARCHAR2(50); <br>
+                BEGIN <br>
+                &nbsp;&nbsp;SELECT name INTO v_name FROM employees WHERE emp_id = 101; <br>
+                &nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Employee Name: ' || v_name); <br>
+                EXCEPTION <br>
+                &nbsp;&nbsp;WHEN NO_DATA_FOUND THEN <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Employee not found'); <br>
+                END;
+                </p>
+        
+       
+        
+    </Section>
+    <footer>
+        <p>© 2025 SQLSolutions | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

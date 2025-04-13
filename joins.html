@@ -1,0 +1,345 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joins</title>
+    <style>
+        
+        body{
+    color: #3e3f5b;
+    margin-right: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.content h2 { 
+  margin-left: 30px;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+
+.content p {
+    margin-left: 25px;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: justify;
+    
+}
+
+.content h3 {
+    margin-top: 18px;
+}
+
+.content ul li{
+    margin-left: 40px;
+    line-height: 1.3;
+    font-size: 18px;
+}
+.content ul {
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+:root {
+    --primary-color: #3E3F5B; /* Soft Dark Gray */
+    --secondary-color: #A6CDC6; /* Light Mint */
+    --accent-color: #16404D; /* Light Mint */
+    --light-color: #f5f3ec; /* Soft blue grey */
+    --text-color: #3E3F5B;   /* Dark Navy */
+    --hover-color: #292c60;  /* Deep mint */
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+
+    background-color: var(--light-color);
+    color: var(--text-color);
+    padding-top: 100px; /* Header (60px) + Navbar (50px) */
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    position: fixed;
+    top: 100px; /* Directly below header */
+    left: 0;
+    right: 0;
+    height: 90px;
+    z-index: 999;
+   
+}
+
+.navlist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navlist li {
+    position: relative;
+}
+
+.navlist li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.navlist li a:hover {
+    background-color: var(--hover-color);
+}
+
+/* Navigation Dropdown */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--hover-color);
+    border-radius: 5px;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+nav ul li .dropdown-content a {
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    text-align: left;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: var(--hover-color);
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Slightly more padding if elements stack */
+    }
+
+    .navlist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlist li ul {
+        position: static;
+    }
+}
+
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!------------------------------------------------HEADER------------------------------------------------->
+    <header>
+        <div class="logo">
+            <h1>SQLSolutions</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sql.html"><i class="fas fa-code"></i> SQL </a></li>
+                <li><a href="PL.html"><i class="fas fa-database"></i> PL/SQL </a></li>
+                <li><a href="casestudy.html"><i class="fas fa-search"></i>Case Study</i></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="navbar">
+        <ul class="navlist">
+            <li><a href="sql.html">SQL Basics</a></li>
+            <li><a href="sqldatabase.html"> SQL Database</a></li>
+            <li><a href="tables.html"> SQL Tables</a></li>
+            <li><a href="Queries.html">SQL Queries</a></li>
+            <li><a href="clauses.html">SQL Clauses</a></li>
+            <li><a href="aggfun.html">SQL Aggregate Functions</a></li>
+            <li><a href="constraints.html">SQL Data Constraints</a></li>
+            <li><a href="joins.html">SQL Joins</a></li>
+        </ul>
+    </nav>
+
+    <!---------------------------Content----------------------------------------->
+    <section class="content">
+        <h2>SQL Joins (Inner, Left, Right and Full Join)</h2>
+        <p>SQL joins are the foundation of database management systems, enabling the combination of data from multiple tables based on relationships between columns. Joins allow efficient data retrieval, which is essential for generating meaningful observations and solving complex business queries.</p>
+        <p>Understanding SQL join types, such as INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN, and NATURAL JOIN, is critical for working with relational databases.</p>
+        <br><p>SQL JOIN clause is used to query and access data from multiple tables by establishing logical relationships between them. It can access data from multiple tables simultaneously using common key values shared across different tables. We can use SQL JOIN with multiple tables. It can also be paired with other clauses, the most popular use will be using JOIN with WHERE clause to filter data retrieval.</p>
+
+        <p>SQL  Joins are: 
+        <ul>
+            <li>Inner Join</li>
+            <li>Outer Join</li>
+            <li>Left Join</li>
+            <li>Right Join</li>
+            <li>Full Join</li>
+            <li>Self Join</li>
+        </ul></p>
+
+        <h2>SQL INNER Join</h2>
+<p>The INNER JOIN keyword selects all rows from both the tables as long as the condition is satisfied. This keyword will create the result-set by combining all rows from both the tables where the condition satisfies i.e value of the common field will be the same.</p>
+
+<br><p>Syntax:</p><br>
+<p>
+SELECT table1.column1, table1.column2, table2.column1, .... <br>
+FROM table1 <br>
+INNER JOIN table2 <br>
+ON table1.matching_column = table2.matching_column;
+</p>
+
+<h2>Key Terms</h2>
+<ul>
+    <li><b>table1:</b> First table.</li>
+    <li><b>table2:</b> Second table.</li>
+    <li><b>matching_column:</b> Column common to both the tables.</li>
+</ul>
+
+<p>Note: We can also write JOIN instead of INNER JOIN. JOIN is same as INNER JOIN.</p>
+
+<h2>INNER JOIN Example</h2>
+<p>Let’s look at the example of INNER JOIN clause, and understand it’s working. This query will show the names and age of students enrolled in different courses.</p>
+
+<p><b>Query:</b></p>
+<p>
+SELECT StudentCourse.COURSE_ID, Student.NAME, Student.AGE <br>
+FROM Student <br>
+INNER JOIN StudentCourse <br>
+ON Student.ROLL_NO = StudentCourse.ROLL_NO;
+</p>
+
+<h2>SQL LEFT Join</h2>
+<p>LEFT JOIN returns all the rows of the table on the left side of the join and matches rows for the table on the right side of the join. For the rows for which there is no matching row on the right side, the result-set will contain null. LEFT JOIN is also known as LEFT OUTER JOIN.</p>
+
+<h2>Syntax</h2>
+<p>
+SELECT table1.column1, table1.column2, table2.column1, .... <br>
+FROM table1 <br>
+LEFT JOIN table2 <br>
+ON table1.matching_column = table2.matching_column;
+</p>
+
+<h2>Key Terms</h2>
+<ul>
+    <li><b>table1:</b> First table.</li>
+    <li><b>table2:</b> Second table.</li>
+    <li><b>matching_column:</b> Column common to both the tables.</li>
+</ul>
+
+<p>Note: We can also use LEFT OUTER JOIN instead of LEFT JOIN, both are the same.</p>
+
+<h2>LEFT JOIN Example</h2>
+<p>In this example, the LEFT JOIN retrieves all rows from the Student table and the matching rows from the StudentCourse table based on the ROLL_NO column.</p>
+
+<p><b>Query:</b></p>
+<p>
+SELECT Student.NAME, Student.AGE, StudentCourse.COURSE_ID <br>
+FROM Student <br>
+LEFT JOIN StudentCourse <br>
+ON Student.ROLL_NO = StudentCourse.ROLL_NO;
+</p>
+
+<h2>SQL SELF Join</h2>
+<p>A Self Join is simply a regular join operation where a table is joined with itself. This allows us to compare rows within the same table, which is particularly useful when working with hierarchical data or when comparing related rows from a single table.</p>
+
+<p>For example, a Self Join can help us retrieve employee-manager relationships, where each employee in the table has a reference to their manager’s ID.</p>
+
+<h2>Syntax</h2>
+<p>
+SELECT columns <br>
+FROM table AS alias1 <br>
+JOIN table AS alias2 <br>
+ON alias1.column = alias2.column;
+</p>
+
+<h2>Explanation</h2>
+<ul>
+    <li><b>SELECT columns:</b> With the help of this we specify the columns you want to retrieve from the self-joined table.</li>
+    <li><b>FROM table AS alias1:</b> With the help of this we specify the name of the table you want to join with itself.</li>
+    <li><b>JOIN table AS alias2:</b> In this, we use the JOIN keyword to show that we are performing a self-join on the same table.</li>
+</ul>
+
+    </section>
+    <footer>
+        <p>© 2025 SQLSolutions | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

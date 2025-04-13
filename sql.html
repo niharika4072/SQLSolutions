@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="sql.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!------------------------------------------------HEADER------------------------------------------------->
+    <header>
+        <div class="logo">
+            <h1>SQLSolutions</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sql.html"><i class="fas fa-code"></i> SQL </a></li>
+                <li><a href="PL.html"><i class="fas fa-database"></i> PL/SQL </a></li>
+                <li><a href="casestudy.html"><i class="fas fa-search"></i>Case Study</i></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="navbar">
+        <ul class="navlist">
+            <li><a href="sql.html">SQL Basics</a></li>
+            <li><a href="sqldatabase.html"> SQL Database</a></li>
+            <li><a href="tables.html"> SQL Tables</a></li>
+            <li><a href="Queries.html">SQL Queries</a></li>
+            <li><a href="clauses.html">SQL Clauses</a></li>
+            <li><a href="aggfun.html">SQL Aggregate Functions</a></li>
+            <li><a href="constraints.html">SQL Data Constraints</a></li>
+            <li><a href="joins.html">SQL Joins</a></li>
+        </ul>
+    </nav>
+
+    <!--------------CONTENT----------------------------------->
+
+    <h2 style="margin-left: 30px;  color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6;">What is SQL?</h2>
+    <p style="margin-left: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.3;text-align: justify; margin-right: 30px;">SQL stands for <i>Structured Query Language</i>. It is a standardized programming language
+         used to manage and manipulate relational databases. It enables users to perform a variety of tasks such as querying data,
+         creating and modifying database structures, and managing access permissions. SQL is widely 
+         used across various relational database management systems such as MySQL, PostgreSQL, Oracle, 
+         and SQL Server.</p>
+    <p style="margin-left: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.3; margin-right: 30px; text-align: justify;">When data needs to be retrieved from a database, SQL is used to construct and send the request. 
+        The Database Management System (DBMS) processes the SQL query, retrieves the requested data, 
+        and returns it to the user or application. Instead of specifying step-by-step procedures, SQL 
+        statements describe what data should be retrieved, organized, or modified, allowing the DBMS 
+        to handle how the operations are executed efficiently.</p>
+
+<!--------------------------------What are sql commands--------------------------------------->
+
+    <h2 id="t1" style="margin-left: 30px; margin-top: 25px; color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6;">What are SQL Commands?</h2>
+    <p style="margin-left: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.3; margin-bottom: 10px; text-align: justify; margin-right: 30px;">SQL Commands are like instructions to a table. It is used to interact with the database with 
+        some operations. It is also used to perform specific tasks, functions, and queries of data. 
+        SQL can perform various tasks like creating a table, adding data to tables, dropping the table,
+         modifying the table, set permission for users.</p>
+    <p style="margin-left: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.3; margin-bottom: 10px;"><b>SQL Commands are mainly categorized into five categories: </b></p>
+    <ul style="margin-left: 150px;font-size: 18px; line-height: 1.5;color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif;margin-bottom: 10px;">
+        <li><b>DDL: </b>Data Definition Language</li>
+        <li><b>DQL: </b>Data Query Language</li>
+        <li><b>DML: </b>Data Manipulation Language</li>
+        <li><b>DCL: </b>Data Control Language</li>
+        <li><b>TCL: </b>Transaction Control Language</li>
+    </ul>
+<!------------------------------DDL--------------------------------------------------------->
+  <h3 style="margin-left: 30px; margin-top: 18px; color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6;">1. <u>Data Definition Language(DDL):</u></h3>
+  <p style="margin-left: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.3; margin-bottom: 10px; text-align: justify; margin-right: 30px;">DDL or Data Definition Language actually consists of the SQL commands that can be used to 
+    defining, altering, and deleting database structures such as tables, indexes, and schemas. 
+    It simply deals with descriptions of the database schema and is used to create and modify the 
+    structure of database objects in the database.</p>
+
+    <p style="margin-left: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.3; margin-bottom: 10px;"><b>Common DDL Commands are:</b></p>
+    <ul style="margin-left: 150px;font-size: 18px; line-height: 1.5;color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif;margin-bottom:  10px; text-align: justify; margin-right: 30px;">
+        <li>CREATE</li>
+        <li>DROP</li>
+        <li>ALTER</li>
+    </ul>
+
+    <!--------------------------DQL-------------------------------------->
+    <h3 style="margin-left: 30px;margin-top: 18px;  color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6;">2. <u>Data Query Language(DQL):</u></h3>
+    <p style="margin-left: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.3; margin-bottom: 10px; text-align: justify; margin-right: 30px;">DQL 
+        statements are used for performing queries on the data within schema objects. The purpose of the DQL Command is to get some schema relation based on the query passed to it.
+         This command allows getting the data out of the database to perform operations with it. When a SELECT is fired against a table or tables the result is compiled into a further 
+         temporary table, which is displayed or perhaps received by the program. <br><br>
+        <b>DQL Command : </b> SELECT</p>
+
+<!--------------------------DML-------------------------------------->
+    <h3 style="margin-left: 30px; margin-top: 18px; color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6;">3. <u>Data Manipulation Language(DML):</u></h3>
+    <p style="margin-left: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.3; margin-bottom: 10px; text-align: justify; margin-right: 30px;">
+        The SQL commands that deal with the manipulation of data present in the database belong to DML or Data Manipulation Language and this includes most of the SQL statements. 
+        It is the component of the SQL statement that controls access to data and to the database. Basically, DCL statements are grouped with DML statements. <br><br>
+        <b>Common DML Commands :</b>
+            <ul style="margin-left: 150px;font-size: 18px; line-height: 1.5;color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif;margin-bottom: 10px;">
+                <li>INSERT</li>
+                <li>UPDATE</li>
+                <li>DELETE</li>
+            </ul>
+    </p>
+
+<!--------------------------DCL-------------------------------------->
+    <h3 style="margin-left: 30px;margin-top: 18px;  color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6;">4. <u>Data Control Language(DCL):</u></h3>
+    <p style="margin-left: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.3; margin-bottom: 10px; text-align: justify; margin-right: 30px;">
+        DCL (Data Control Language) includes commands such as GRANT and REVOKE which mainly deal with the rights, permissions, and other controls of the database system. 
+        These commands are used to control access to data in the database by granting or revoking permissions. <br><br>
+        <b>Common DCL Commands: </b>
+        <ul style="margin-left: 150px;font-size: 18px; line-height: 1.5;color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif;margin-bottom: 10px;">
+            <li>GRANT</li>
+            <li>REVOKE</li>
+        </ul>
+    </p>
+
+<!--------------------------TCL-------------------------------------->
+    <h3 style="margin-left: 30px;margin-top: 18px;  color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6;">5. <u>Transaction Control Language(TCL):</u></h3>
+    <p style="margin-left: 25px; color: #3E3F5B; font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.3; margin-bottom: 10px; text-align: justify; margin-right: 30px;">
+        Transactions group a set of tasks into a single execution unit. Each transaction begins with a specific task and ends when all the tasks in the group are successfully completed.
+         If any of the tasks fail, the transaction fails. Therefore, a transaction has only two results: success or failure.
+         <br><br> <b>Common TCL Commands:</b>
+         <ul style="margin-left: 150px;font-size: 18px; line-height: 1.5;color: #3E3F5B; font-family: Georgia, 'Times New Roman', Times, serif;margin-bottom: 10px;">
+            <li>COMMIT</li>
+            <li>ROLLBACK</li>
+            <li>SAVEPOINT</li>
+         </ul>
+    </p> 
+    <footer>
+        <p>© 2025 SQLSolutions | All Rights Reserved</p>
+    </footer>
+
+    </body>
+    </html>
+
+
+
+    
+
+    
+
+

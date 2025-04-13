@@ -1,0 +1,381 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <style>
+        body{
+    color: #3e3f5b;
+    margin-right: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content h2 { 
+  margin-left: 30px;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.content p {
+    margin-left: 25px;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: justify;
+    
+}
+
+.content h3 {
+    margin-top: 18px;
+}
+
+.content ul li{
+    margin-left: 40px;
+    line-height: 1.3;
+    font-size: 18px;
+}
+.content ul {
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+:root {
+    --primary-color: #3E3F5B; /* Soft Dark Gray */
+    --secondary-color: #A6CDC6; /* Light Mint */
+    --accent-color: #16404D; /* Light Mint */
+    --light-color: #f5f3ec; /* Soft blue grey */
+    --text-color: #3E3F5B;   /* Dark Navy */
+    --hover-color: #292c60;  /* Deep mint */
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+
+    background-color: var(--light-color);
+    color: var(--text-color);
+    padding-top: 100px; /* Header (60px) + Navbar (50px) */
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    position: fixed;
+    top: 100px; /* Directly below header */
+    left: 0;
+    right: 0;
+    height: 90px;
+    z-index: 999;
+   
+}
+
+.navlist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navlist li {
+    position: relative;
+}
+
+.navlist li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.navlist li a:hover {
+    background-color: var(--hover-color);
+}
+
+/* Navigation Dropdown */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--hover-color);
+    border-radius: 5px;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+nav ul li .dropdown-content a {
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    text-align: left;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: var(--hover-color);
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Slightly more padding if elements stack */
+    }
+
+    .navlist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlist li ul {
+        position: static;
+    }
+}
+
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!------------------------------------------------HEADER------------------------------------------------->
+    <header>
+        <div class="logo">
+            <h1>SQLSolutions</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sql.html"><i class="fas fa-code"></i> SQL </a></li>
+                <li><a href="PL.html"><i class="fas fa-database"></i> PL/SQL </a></li>
+                <li><a href="casestudy.html"><i class="fas fa-search"></i>Case Study</i></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="navbar">
+        <ul class="navlist">
+            <li><a href="PL.html">Introduction to PL/SQL</a></li>
+            <li><a href="controlstructure.html">Control Structure</a</li>
+            <li><a href="cursor.html">Cursor Management</a</li>
+            <li><a href="triggers.html">Triggers</a</li>
+            <li><a href="exption.html">Exception Handling</a></li>
+        </ul>
+    </nav>
+
+
+        <section class="content">
+            <h2>Control Structure in PL/SQL</h2>
+    
+            <p>Control structures in PL/SQL are used to control the flow of execution of statements. These structures allow conditional execution, repetition of code blocks, and handling multiple conditions based on logic.</p>
+    
+            <p>There are three main types of control structures in PL/SQL:</p>
+    
+            <ul>
+                <li>Conditional Control (IF Statements)</li>
+                <li>Iterative Control (LOOP Statements)</li>
+                <li>Sequential Control (GOTO Statement)</li>
+            </ul>
+    
+            <h2>1. Conditional Control - IF Statements</h2>
+    
+            <p>Conditional control is used to execute a block of statements based on a condition.</p>
+    
+            <h2>Types of IF Statements:</h2>
+    
+            <ul>
+                <li><b>IF...THEN</b></li>
+                <li><b>IF...THEN...ELSE</b></li>
+                <li><b>IF...THEN...ELSIF...ELSE</b></li>
+            </ul>
+    
+            <h2>Example of IF...THEN</h2>
+    
+            <p>
+            DECLARE <br>
+            &nbsp;&nbsp;v_marks NUMBER := 80; <br>
+            BEGIN <br>
+            &nbsp;&nbsp;IF v_marks &gt;= 50 THEN <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Pass'); <br>
+            &nbsp;&nbsp;END IF; <br>
+            END;
+            </p>
+    
+            <h2>Example of IF...THEN...ELSE</h2>
+    
+            <p>
+            DECLARE <br>
+            &nbsp;&nbsp;v_marks NUMBER := 40; <br>
+            BEGIN <br>
+            &nbsp;&nbsp;IF v_marks &gt;= 50 THEN <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Pass'); <br>
+            &nbsp;&nbsp;ELSE <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Fail'); <br>
+            &nbsp;&nbsp;END IF; <br>
+            END;
+            </p>
+    
+            <h2>Example of IF...THEN...ELSIF...ELSE</h2>
+    
+            <p>
+            DECLARE <br>
+            &nbsp;&nbsp;v_marks NUMBER := 75; <br>
+            BEGIN <br>
+            &nbsp;&nbsp;IF v_marks &gt;= 90 THEN <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Excellent'); <br>
+            &nbsp;&nbsp;ELSIF v_marks &gt;= 75 THEN <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Very Good'); <br>
+            &nbsp;&nbsp;ELSIF v_marks &gt;= 50 THEN <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Pass'); <br>
+            &nbsp;&nbsp;ELSE <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Fail'); <br>
+            &nbsp;&nbsp;END IF; <br>
+            END;
+            </p>
+    
+            <h2>2. Iterative Control - LOOP Statements</h2>
+    
+            <p>PL/SQL provides three types of loops:</p>
+    
+            <ul>
+                <li>Simple LOOP</li>
+                <li>WHILE LOOP</li>
+                <li>FOR LOOP</li>
+            </ul>
+    
+            <h2>Example of Simple LOOP</h2>
+    
+            <p>
+            DECLARE <br>
+            &nbsp;&nbsp;i NUMBER := 1; <br>
+            BEGIN <br>
+            &nbsp;&nbsp;LOOP <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Number: ' || i); <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;i := i + 1; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;EXIT WHEN i &gt; 5; <br>
+            &nbsp;&nbsp;END LOOP; <br>
+            END;
+            </p>
+    
+            <h2>Example of WHILE LOOP</h2>
+    
+            <p>
+            DECLARE <br>
+            &nbsp;&nbsp;i NUMBER := 1; <br>
+            BEGIN <br>
+            &nbsp;&nbsp;WHILE i &lt;= 5 LOOP <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Value: ' || i); <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;i := i + 1; <br>
+            &nbsp;&nbsp;END LOOP; <br>
+            END;
+            </p>
+    
+            <h2>Example of FOR LOOP</h2>
+    
+            <p>
+            BEGIN <br>
+            &nbsp;&nbsp;FOR i IN 1..5 LOOP <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;DBMS_OUTPUT.PUT_LINE('Iteration: ' || i); <br>
+            &nbsp;&nbsp;END LOOP; <br>
+            END;
+            </p>
+    
+            <h2>3. Sequential Control - GOTO Statement</h2>
+    
+            <p>The GOTO statement is used to transfer control to a labeled statement within the PL/SQL block.</p>
+    
+            <h2>Example of GOTO Statement</h2>
+    
+            <p>
+            DECLARE <br>
+            &nbsp;&nbsp;v_num NUMBER := 5; <br>
+            BEGIN <br>
+            &nbsp;&nbsp;IF v_num = 5 THEN <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;GOTO skip_block; <br>
+            &nbsp;&nbsp;END IF; <br>
+            DBMS_OUTPUT.PUT_LINE('This will not be printed'); <br>
+            &lt;&lt;skip_block&gt;&gt; <br>
+            DBMS_OUTPUT.PUT_LINE('Execution jumped to here'); <br>
+            END;
+            </p>
+    
+        </section>
+    
+   
+    <footer>
+        <p>© 2025 SQLSolutions | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+    

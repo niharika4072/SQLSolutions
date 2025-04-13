@@ -1,0 +1,157 @@
+/* Variables */
+:root {
+    --primary-color: #3E3F5B; /* Soft Dark Gray */
+    --secondary-color: #A6CDC6; /* Light Mint */
+    --accent-color: #16404D; /* Light Mint */
+    --light-color: #f5f3ec; /* Soft blue grey */
+    --text-color: #3E3F5B;   /* Dark Navy */
+    --hover-color: #292c60;  /* Deep mint */
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    padding-top: 100px; /* Header (60px) + Navbar (50px) */
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    position: fixed;
+    top: 100px; /* Directly below header */
+    left: 0;
+    right: 0;
+    height: 90px;
+    z-index: 999;
+   
+}
+
+.navlist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navlist li {
+    position: relative;
+}
+
+.navlist li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.navlist li a:hover {
+    background-color: var(--hover-color);
+}
+
+/* Navigation Dropdown */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--hover-color);
+    border-radius: 5px;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+nav ul li .dropdown-content a {
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    text-align: left;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: var(--hover-color);
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Slightly more padding if elements stack */
+    }
+
+    .navlist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlist li ul {
+        position: static;
+    }
+}
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
